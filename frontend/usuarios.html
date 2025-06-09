@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários - Sistema de Biblioteca</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+    <header id="navbar-container" class="container mx-auto px-4 sm:px-6 lg:px-8 pt-4"></header>
+
+    <main class="container mx-auto p-4 sm:px-6 lg:px-8">
+        <section id="secao-usuarios" class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-700">Gerenciar Usuários</h2>
+            <form id="formulario-usuario" class="space-y-4 max-w-xl">
+                <input type="hidden" id="usuarioId">
+                <div>
+                    <label for="usuarioNome" class="block text-sm font-medium text-gray-600">Nome:</label>
+                    <input type="text" id="usuarioNome" name="usuarioNome" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+                <div>
+                    <label for="usuarioEmail" class="block text-sm font-medium text-gray-600">Email:</label>
+                    <input type="email" id="usuarioEmail" name="usuarioEmail" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+                <div>
+                    <label for="usuarioMatricula" class="block text-sm font-medium text-gray-600">Número de Cadastro:</label>
+                    <input type="text" id="usuarioMatricula" name="usuarioMatricula" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+                <div class="flex justify-end space-x-3">
+                    <button type="button" id="botao-cancelar-edicao-usuario" class="px-4 py-2 bg-gray-300 text-gray-800 rounded-md hover:bg-gray-400 hidden">Cancelar</button>
+                    <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Salvar Usuário</button>
+                </div>
+            </form>
+            <div class="mt-8 border-t pt-6">
+                <h3 class="text-xl font-semibold text-gray-700">Usuários Cadastrados</h3>
+                <ul id="lista-usuarios" class="mt-4 space-y-2"></ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
